@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+   <link rel="stylesheet" href="sheets.css" media="screen" title="no title" charset="utf-8">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+   <script type = "text/html" id="bitterTmpl">
+      <div class = "item">
+        <ul>
+      <i class='fa fa-book'></i>
+      <p><%= name%></p>
+      <p><%= comment%></p>
+    </ul>
+    <ul>
+      <li id = 'rightIcon'>0</li>
+      <li><i class="fa fa-star"></i></li>
+      </div>
+   </script>
+   <script type="text/html" id = "templateRepositories">
+     <div>
+       <ul class = "float-right">
+         <li class = "name"><%=name%></li>
+         <li><%= comment%></li>
+         <li><%= age%></li>
+       </ul>
+       <ul>
+         <li><%=type%></li>
+         <li><i class="fa fa-star"></li>
+       </ul>
+     </div>
+   </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><i class="fa fa-github"></i></li>
+          <li><form id = "search">
+            <input type="text" name="submit" value="Search GitHub">
+          </form></li>
+        </ul>
+        <ul>
+          <li>Pull requests</li>
+          <li> Issues</li>
+          <li> Gist</li>
+        </ul>
+        <ul>
+            <li id = "messages"><i class="fa fa-bell"></i><p>
+              You have no uread messages
+            </p></li>
+            <li id = "create"><i class="fa fa-user-plus"></i><p>
+              Create new..
+            </p></li>
+            <li id = "profile"><img id = "account" src="" alt="" /><p>
+              View profile and more
+            </p></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+      <div class="column">
+        <img id = "avatar" src="#" alt="" />
+        <p id = "login">#</p>
+        <p id = "joined"> Joined on</p>
+        <ul>
+          <li><p id = "followers"></p><p>Followers</p></li>
+          <li><p id = "stared"></p><p>Stared</p></li>
+          <li><p id = "following">#</p><p>Following</p></li>
+        </ul>
+      </div>
+      <div class="column">
+        <div class="banner border">
+          <p>Pro tip: updating your profile with your name, location, and a profile picture helps other GitHub users get to know you.</p>
+          <button type="button" name="button">Edit Profile</button>
+        </div>
+        <div class="contents">
+          <div class="options">
+            <ul class = "clickDirectory">
+              <li id = "documents"><i class="fa fa-plus-square"></i><p>Contributions</p></li>
+              <li id = "repositories"><i class="fa fa-book"></i><p>Repositories></p></li>
+              <li id = "publicActivity"><i class="fa fa-rss"></i><p>Public Activity</p></li>
+            </ul>
+          </div>
+          <div class="divider border">
+            <p>
+              Popular repositories
+            </p>
+          </div>
+
+          <div class="documents border">
+          </div>
+          <div class="repositories border">
+          </div>
+          <div class="publicActivity">
+            <p>
+              hello public Activity
+            </p>
+          </div>
+        </div>
+        <div class="contributions border  ">
+          <div class="divider">
+            <p>Contributions </p>
+          </div>
+          <div class="graph">
+            <img id = "calendar" src="#" alt="" />
+          </div>
+          <div class="bottom_text border">
+            <p>This is your contribution graph. When you make a commit to a repository, you’ll get a ■ for that day. Make more contributions and you’ll get a darker green square. Over time, your chart might start looking something like this.
+
+We have a quick guide that will show you how to create your first repository. You’ll also make a commit and earn your first green square! </p>
+            <button type="button" name="button">Read the Hello World guide</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <li id= "copyright">@2015 GitHub,Inc.</li>
+      <li class="leftUl">
+        <a href="#">Terms</a>
+        <a href="#">Privacy</a>
+        <a href="#">Security</a>
+        <a href="#">Contact</a>
+        <a href="#">Help</a>
+      </li>
+        <li id = "gitIcon"><i class="fa fa-github"></i></li>
+        <li class = "rightUl">
+          <a href="#">Status</a>
+          <a href="#">API</a>
+          <a href="#">Training</a>
+          <a href="#">Shop</a>
+          <a href="#">Blog</a>
+          <a href="#">About</a>
+          <a href="#">Pricing</a>
+        </li>
+    </footer>
+
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore-min.js" charset="utf-8"></script>
+    <script src="github.js"> </script>
+    <script src="vars.js"></script>
+    <script src="main.js"> </script>
+
+  </body>
+</html>
